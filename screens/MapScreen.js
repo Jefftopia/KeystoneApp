@@ -30,7 +30,6 @@ export default class App extends Component {
     this.watchID = null;
   }
 
-
   renderMarkers() {
     return this.state.markers.map((marker, i) => {
       if (marker.latitude && marker.longitude) {

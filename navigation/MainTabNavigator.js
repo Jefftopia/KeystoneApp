@@ -9,6 +9,7 @@ import HomeScreen from '../screens/HomeScreen';
 import MapScreen from '../screens/MapScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import ListScreen from '../screens/ListScreen';
 
 export default TabNavigator(
   {
@@ -21,9 +22,15 @@ export default TabNavigator(
     Settings: {
       screen: SettingsScreen,
     },
+    List: {
+      screen: ListScreen
+    }
   },
   {
     navigationOptions: ({ navigation }) => ({
+      // tabBarOnPress: () => {
+      //   console.log('test ', arguments);
+      // },
       tabBarIcon: ({ focused }) => {
         const { routeName } = navigation.state;
         let iconName;
